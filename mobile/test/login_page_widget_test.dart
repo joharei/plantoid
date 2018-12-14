@@ -28,6 +28,6 @@ void main() {
     await tester.pumpAndSettle();
 
     // Verify that the app displays the text
-    expect(find.text('Create your account'), findsOneWidget);
+    expect(find.text('Sign-in with your account'), findsOneWidget);
   });
 }
