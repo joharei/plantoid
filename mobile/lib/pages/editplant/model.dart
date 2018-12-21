@@ -30,7 +30,7 @@ class EditPlantViewModel extends BaseViewModel<EditPlantState> {
 
   _wateringFrequencyChanged(double wateringFrequency) {
     _plant = _plant.copy(wateringFrequency: wateringFrequency.toInt());
-    setState(EditPlantState.editingPlant(_plant));
+    setState(EditPlantState.editingPlant(_plant, _photo));
   }
 
   _savePlant(Plant plant) async {
