@@ -10,7 +10,7 @@ description: Helping you keep track of your plants, and when to water them.
 version: 1.0.0+12
 
 environment:
-  sdk: ">=2.0.0-dev.68.0 <3.0.0"
+  sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
   flutter:
