@@ -138,8 +138,10 @@ class _AuthenticationServiceImpl implements AuthenticationService {
     final GoogleSignInAuthentication googleAuth =
         await googleUser.authentication;
     final FirebaseUser user = await _firebaseAuth
-        .signInWithGoogle(
-            accessToken: googleAuth.accessToken, idToken: googleAuth.idToken)
+        .signInWithCredential(GoogleAuthProvider.getCredential(
+          idToken: googleAuth.idToken,
+          accessToken: googleAuth.accessToken,
+        ))
         .timeout(Duration(seconds: 5),
             onTimeout: () => Future.error(Exception(
                 "Unable to sign in. Please check your network connection.")));
@@ -174,7 +176,9 @@ class _AuthenticationServiceImpl implements AuthenticationService {
 
     final token = result.accessToken.token;
     final FirebaseUser user = await _firebaseAuth
-        .signInWithFacebook(accessToken: token)
+        .signInWithCredential(FacebookAuthProvider.getCredential(
+          accessToken: token,
+        ))
         .timeout(Duration(seconds: 5),
             onTimeout: () => Future.error(Exception(
                 "Unable to sign in. Please check your network connection.")));

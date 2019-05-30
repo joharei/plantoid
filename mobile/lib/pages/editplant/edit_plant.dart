@@ -191,7 +191,7 @@ class _EditPlantState extends ViewState<EditPlantPage,
     } else if (photoUrl != null) {
       image = CachedNetworkImage(
         imageUrl: photoUrl,
-        placeholder: Center(child: CircularProgressIndicator()),
+        placeholder: (_, __) => Center(child: CircularProgressIndicator()),
         fit: BoxFit.cover,
       );
     } else {

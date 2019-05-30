@@ -40,8 +40,7 @@ android {
         // TODO: need minSdkVersion 21 for now, but they're working on it:
         // https://github.com/flutter/flutter/issues/19083
         minSdkVersion 21
-        // keyboard doesn't appear on version 28: https://github.com/flutter/flutter/issues/21911
-        targetSdkVersion 27
+        targetSdkVersion 28
 
         multiDexEnabled true
 

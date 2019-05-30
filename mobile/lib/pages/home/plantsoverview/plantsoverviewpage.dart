@@ -191,7 +191,7 @@ class _PlantsOverviewPageState extends ViewState<PlantsOverviewPage,
             aspectRatio: 4.0 / 3,
             child: CachedNetworkImage(
               imageUrl: plant.photoUrl,
-              placeholder: Image.asset('assets/icons/yellow_flower.webp'),
+              placeholder: (_, __) => Image.asset('assets/icons/yellow_flower.webp'),
               fit: BoxFit.cover,
             ),
           ),
