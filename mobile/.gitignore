@@ -73,7 +73,6 @@ build/
 
 # Project specific rules
 android/app/src/main/res/values/strings_facebook_login.xml
-android/key.properties
 android/app/google-services.json
 ios/Secrets.xcconfig
 ios/Runner/GoogleService-Info.plist
