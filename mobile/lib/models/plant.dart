@@ -25,7 +25,7 @@ class Plant {
       name: snapshot[FirestoreConstants.NAME],
       notes: snapshot[FirestoreConstants.NOTES],
       wateringFrequency: snapshot[FirestoreConstants.WATERING_FREQUENCY],
-      lastWatered: snapshot[FirestoreConstants.LAST_WATERED],
+      lastWatered: (snapshot[FirestoreConstants.LAST_WATERED] as Timestamp).toDate(),
       photoUrl: snapshot[FirestoreConstants.PHOTO_URL]
   );
 
